@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!--
+    버튼 3개를 만들어서
+    1번을 누르면 안녕하세요가 빨간색으로
+    2번을 누르면 안녕하세요가 hi로
+    3번을 누르면 hi라는 alert 출력-->
+
+
+<h1 id ="message">안녕하세요</h1>
+
+
+<button onclick="test()">1번 버튼</button>
+<script>
+        const $area = document.querySelector("message");
+        $area.style.color = "black";
+
+        function test(){
+        
+            const $input = document.querySelector("#message");
+            $input.style.color = `red`;
+
+        }
+</script>
+
+<br><br><br>
+<button onclick="test1()">2번 버튼</button>
+
+<script>
+       
+function test1(){
+
+        const $area = document.getElementById("message");
+        console.log($area.innerHTML);
+
+        $area.innerHTML = "<h1>hi</h1>"
+        console.log($area.innerHTML); // 보완적으로 취약하므로 주의가 필요하다.
+        }
+        
+
+        
+
+</script>
+
+
+<br><br><br>
+<button onclick="alert('hi')">3번 버튼</button><br>
+
+
+</body>
+</html>
